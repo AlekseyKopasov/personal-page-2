@@ -5,31 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Персональная страница</title>
-
+    <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <header>
-
+    <header class="header">
       <a href="#">Logo</a>
-      <nav>
-        <ul>
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Сотрудники</a></li>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Сотрудники</a>
+          </li>
         </ul>
       </nav>
 
-      <button type="button">Выйти</button>
+      <button class="logout" type="button">Выйти</button>
 
     </header>
-    <main>
-      <div>
+
+    <main class="main">
+      <section class="section user-info">
         <div class="user-info__avatar">
 
-          <img src="avatar.jpg" alt="Аватар Ивана Иванова">
+          <img class="user-info__img" src="avatar.jpg" alt="Аватар Ивана Иванова">
 
-          <p class="user-info__name">Иван Иванов</p>
+          <h2 class="user-info__name">Иван Иванов</h2>
         </div>
         <ul class="user-info__properties">
           <li class="user-info__properties-item">
@@ -49,14 +55,14 @@
             <span>Санкт-Петербург</span>
           </li>
         </ul>
-      </div>
+      </section>
 
-      <section>
-        <div>
-          <h2>
+      <div class="about">
+        <section class="section about__inner">
+          <h2 class="section-title">
             <span>История</span>
           </h2>
-          <div>
+          <div class="about__content">
             <p>Иван — амбициозный, инициативный с неограниченным воображением и творческим стремлением.
               Главный инструмент в работе Ивана - Figma. В нашей команде Иван собирает прототипы и проверяет
               гипотезы,
@@ -71,107 +77,105 @@
             </p>
             <p>У Ивана высшее психологическое образование и он отлично понимает, что нужно нашим клиентам. </p>
           </div>
-          <footer>
-            <button type="button">Написать мне</button>
-          </footer>
-        </div>
+          <button class="send-me" type="button">Написать мне</button>
+        </section>
 
-        <div>
-          <ul>
-            <li>
-              <h2>
+        <section class="section about__inner">
+          <ul class="about__list-wrapper">
+            <li class="about__list-item">
+              <h2 class="section-title">
                 <span>Стремится</span>
               </h2>
-              <ul>
-                <li>Создавать дизайны, которые будут легко
+              <ul class="about__list-inner">
+                <li class="about__list-inner-item accent">Создавать дизайны, которые будут легко
                   использоваться и пониматься
                   пользователем</li>
-                <li>Улучшать пользовательский опыт путем улучшения удобства и повышения
+                <li class="about__list-inner-item">Улучшать пользовательский опыт путем улучшения удобства и повышения
                   привлекательности дизайна</li>
-                <li>Экономить время комады разработки и тестирования</li>
+                <li class="about__list-inner-item">Экономить время комады разработки и тестирования</li>
               </ul>
             </li>
-            <li>
-              <h2>
+            <li class="about__list-item">
+              <h2 class="section-title">
                 <span>Цели</span>
               </h2>
-              <ul>
-                <li>Учиться и совершенствоваться для того, чтобы
+              <ul class="about__list-inner">
+                <li class="about__list-inner-item accent">Учиться и совершенствоваться для того, чтобы
                   создавать дизайн, который
                   будет облегчать жизнь людям
                 </li>
-                <li>Делать мир чуть лучше</li>
+                <li class="about__list-inner-item">Делать мир чуть лучше</li>
               </ul>
             </li>
-            <li>
-              <h2>
+            <li class="about__list-item">
+              <h2 class="section-title">
                 <span>Обязанности</span>
               </h2>
-              <ul>
-                <li>Проведение глубинных интервью с пользователями
+              <ul class="about__list-inner">
+                <li class="about__list-inner-item accent">Проведение глубинных интервью с пользователями
                 </li>
-                <li>Проведени пользовательского тестирования прототипов</li>
-                <li>Разработка визуального дизайна интерфейса</li>
+                <li class="about__list-inner-item">Проведени пользовательского тестирования прототипов</li>
+                <li class="about__list-inner-item">Разработка визуального дизайна интерфейса</li>
               </ul>
             </li>
           </ul>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      <section>
-        <div>
-          <h2>Инструменты:</h2>
-          <ul>
-            <li>
+      <section class="section tools">
+        <div class="tools__column">
+          <h2 class="section-title tools__title">Инструменты:</h2>
+          <ul class="tools__list">
+            <li class="tools__item">
               <span>Использует</span>
             </li>
-            <li>
+            <li class="tools__item">
               <span>Нравится</span>
             </li>
-            <li>
+            <li class="tools__item">
               <span>Не нравится</span>
             </li>
           </ul>
         </div>
 
-        <div>
-          <h2>Ежедневно</h2>
-          <ul>
-            <li>
+        <div class="tools__column">
+          <h2 class="section-title tools__title">Ежедневно</h2>
+          <ul class="tools__list">
+            <li class="tools__item">
               <span>Figma</span>
             </li>
-            <li><span>Miro</span></li>
-            <li>
+            <li class="tools__item"><span>Miro</span></li>
+            <li class="tools__item">
               <span>Google forms</span>
             </li>
-            <li><span>Gmail</span></li>
-            <li><span>Google Meet</span></li>
+            <li class="tools__item"><span>Gmail</span></li>
+            <li class="tools__item"><span>Google Meet</span></li>
           </ul>
         </div>
 
-        <div>
-          <h2>Часто</h2>
-          <ul>
-            <li>
+        <div class="tools__column">
+          <h2 class="section-title tools__title">Часто</h2>
+          <ul class="tools__list">
+            <li class="tools__item">
               <span>FigJam</span>
             </li>
-            <li><span>Google calendar</span></li>
-            <li><span>Poline</span></li>
-            <li><span>Adobe Illustrator</span></li>
+            <li class="tools__item"><span>Google calendar</span></li>
+            <li class="tools__item"><span>Poline</span></li>
+            <li class="tools__item"><span>Adobe Illustrator</span></li>
           </ul>
         </div>
 
-        <div>
-          <h2>Редко</h2>
-          <ul>
-            <li><span>Photoshop</span></li>
+        <div class="tools__column">
+          <h2 class="section-title tools__title">Редко</h2>
+          <ul class="tools__list">
+            <li class="tools__item"><span>Photoshop</span></li>
           </ul>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p><span>&copy;&nbsp;2024</span> все права защищены</p>
+    <footer class="footer">
+      <p class="copy">&copy;&nbsp;2024 все права защищены</p>
     </footer>
   </body>
 
