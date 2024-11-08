@@ -67,6 +67,10 @@ body {
   gap: 16px;
 }
 
+.user-info__name {
+  margin: 0;
+}
+
 .user-info__img {
   max-width: 128px;
   max-height: 128px;
