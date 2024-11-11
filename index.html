@@ -338,6 +338,36 @@
         </div>
       </footer>
     </div>
+
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__wrapper">
+        <div class="modal__content">
+          <div class="modal__title">Напишите мне</div>
+          <button class="modal__close" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+
+          <form class="modal__form">
+            <div class="modal__field">
+              <label for="user-name" class="modal__label">Представтесь</label>
+              <input id="user-name" type="text" class="modal__input" placeholder="Как вас зовут?">
+            </div>
+            <div class="modal__field">
+              <label for="user-email" class="modal__label">Почта (для обратной связи)</label>
+              <input id="user-email" type="email" class="modal__input" placeholder="Ваш адрес электронной почты">
+            </div>
+            <div class="modal__field">
+              <label for="user-msg" class="modal__label">Сообщение</label>
+              <textarea id="user-msg" class="modal__input modal__textarea"></textarea>
+            </div>
+
+            <button class="modal__send" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   </body>
 
 </html>

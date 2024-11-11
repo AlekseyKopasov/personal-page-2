@@ -295,3 +295,208 @@ body {
   font-weight: 400;
   opacity: 0.6;
 }
+
+/* modal */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  transform: scale(1.2);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  width: 100vw;
+  height: 100vh;
+
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+.modal.is-active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+
+  pointer-events: auto;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.modal__content {
+  position: relative;
+
+  max-width: 646px;
+  width: 100%;
+  padding: 40px 24px;
+
+  background-color: #ffffff;
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-family: inherit;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #000000;
+
+  text-align: center;
+}
+
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: transparent;
+  border: none;
+  padding: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #272727;
+
+  cursor: pointer;
+
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.modal__close:hover {
+  /* навели на элемент */
+  color: #760808;
+}
+
+.modal__close:focus {
+  /* на элемент нажали и отпустили */
+  opacity: 0.8;
+}
+.modal__close:focus:hover {
+  opacity: 1;
+}
+
+.modal__close:active {
+  color: #272727;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 26px;
+}
+
+.modal__field:last-child {
+  margin-bottom: 0;
+}
+
+.modal__label {
+  margin-bottom: 5px;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #000000;
+}
+
+.modal__input {
+  padding: 15px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+
+  cursor: pointer;
+
+  transition: border-color 0.3s ease;
+}
+
+.modal__textarea {
+  min-height: 214px;
+  resize: none;
+}
+
+.modal__input:hover {
+  border-color: #000000;
+}
+
+.modal__input:focus {
+  border-color: #039ef9;
+  outline: none;
+}
+
+.modal__send {
+  max-width: 173px;
+  width: 100%;
+  padding: 13px 24px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #ffffff;
+
+  border: 1px solid transparent;
+  background-color: #760808;
+
+  transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.modal__send:hover {
+  /* навели на элемент */
+  color: #760808;
+  background-color: #ffffff;
+  border-color: #760808;
+}
+
+.modal__send:focus {
+  /* на элемент нажали и отпустили */
+  border-color: #272727;
+  background-color: rgba(118, 8, 8, 0.8);
+}
+.modal__send:focus:hover {
+  background-color: #760808;
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.modal__send:active {
+  /* на элемент нажали */
+  opacity: 0.6;
+}
+
+.is-active-link {
+  pointer-events: none;
+  color: #ff6e40;
+  cursor: initial;
+}
