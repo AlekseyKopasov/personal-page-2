@@ -83,6 +83,23 @@ body {
   padding: 5px;
   text-decoration: none;
   color: #f0dfdf;
+  border-bottom: 1px solid transparent;
+
+  transition: color 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.nav__link:hover {
+  color: #ff6e40;
+}
+
+.nav__link:focus,
+.nav__link:focus-within {
+  outline: none;
+  border-color: #ff6e40;
+}
+
+.nav__link:active {
+  opacity: 0.6;
 }
 
 .nav__link.is-active {
